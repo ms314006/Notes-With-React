@@ -1,0 +1,25 @@
+.backgroundBlock {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.backgroundObject {
+    width: 72%;
+    height: 84px;
+    background: #F1F0F0;
+    transform-origin: top;
+    transform: skewX(150deg);
+}
+
+.mainContent {
+    box-sizing: border-box;
+    padding: 24px 220px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
