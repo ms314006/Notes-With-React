@@ -1,21 +1,33 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import BackgroundObject from './BackgroundObject';
 import Header from '../Header';
+import Content from '../Content';
 import styles from './index.scss';
-import theme from '../../style/theme.scss';
+import themeStyle from '../../style/theme.scss';
 
-const Main = (): JSX.Element => (
-  <>
-    <div
-      className={styles.backgroundBlock}
-      data-testid="main_block"
-    >
-      <div className={styles.backgroundObject} />
-      <div className={styles.backgroundObject} />
-    </div>
-    <div className={styles.mainContent}>
-      <Header />
-    </div>
-  </>
-);
+const Main = (): JSX.Element => {
+  const { theme } = useSelector(state => state);
+  return (
+    <>
+      <div
+        className={
+          `${styles.backgroundBlock}
+          ${theme === 'light'
+            ? themeStyle.backgroungLight
+            : themeStyle.backgroungDark}`
+        }
+        data-testid="main_block"
+      >
+        <BackgroundObject />
+        <BackgroundObject />
+      </div>
+      <div className={styles.mainContent}>
+        <Header />
+        <Content />
+      </div>
+    </>
+  );
+};
 
 export default Main;

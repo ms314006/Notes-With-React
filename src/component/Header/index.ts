@@ -1,3 +1,3 @@
-import Main from './Header';
+import Header from './Header';
 
-export default Main;
+export default Header;

@@ -1,7 +1,44 @@
+$darkDomColor : #fff;
+$lightDomColor: #000;
+
+.backgroungLight {
+    background: #fff;
+}
+
+.backgroungDark {
+    background: #22222C;
+};
+
 .backgroungObjLight {
     background: #F1F0F0;
 }
 
 .backgroungObjDark {
-    background: #F1F0F0;
+    background: #454558;
+}
+
+.switchThemeLight {
+    border: solid 1px $lightDomColor;
+    background: linear-gradient(to left, #000 50%, #fff 50%);
+}
+
+.switchThemeDark {
+    border: solid 1px $darkDomColor;
+    background: linear-gradient(to left, #fff 50%, #454558 50%);
+}
+
+.searchInputLight {
+    border: 1px solid $lightDomColor;
+}
+
+.searchInputDark {
+    border: 1px solid $darkDomColor;
+}
+
+.fontColorLight {
+    color: $lightDomColor;
+}
+
+.fontColorDark {
+    color: $darkDomColor;
 }

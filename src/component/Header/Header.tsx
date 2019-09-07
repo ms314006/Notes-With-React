@@ -1,13 +1,15 @@
 import React from 'react';
 import SearchInput from './SearchInput';
+import Member from './Member';
+import SwitchTheme from './SwitchTheme';
 import styles from './index.scss';
 
 const Header = () => {
   return (
     <div className={styles.headerBlock}>
-      <div>會員照片</div>
+      <Member />
       <SearchInput />
-      <div>切換</div>
+      <SwitchTheme />
     </div>
   );
 };
