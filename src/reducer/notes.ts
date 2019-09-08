@@ -3,6 +3,8 @@ import * as actions from '../action/notes';
 const initState = {
   theme: 'light',
   searchWord: '',
+  filterStar: false,
+  displayNotesMode: 'module',
 };
 
 const notesReducer = (state = initState, action: any) => {
@@ -16,6 +18,16 @@ const notesReducer = (state = initState, action: any) => {
       return {
         ...state,
         searchWord: action.payload.searchWord,
+      };
+    case actions.CHANGE_FILTER_STAR_NOTES:
+      return {
+        ...state,
+        filterStar: !state.filterStar,
+      };
+    case actions.CHANGE_DISPLAY_NOTES_MODE:
+      return {
+        ...state,
+        displayNotesMode: action.payload.displayNotesMode,
       };
     default:
       return state;

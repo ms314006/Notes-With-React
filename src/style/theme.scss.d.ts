@@ -8,3 +8,5 @@ export const searchInputLight: string;
 export const searchInputDark: string;
 export const fontColorLight: string;
 export const fontColorDark: string;
+export const blockColorLight: string;
+export const blockColorDark: string;
