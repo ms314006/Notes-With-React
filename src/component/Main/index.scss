@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    overflow-x: auto;
 }
 
 .mainContent {
@@ -14,4 +15,14 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+@media screen and (min-width: 0px) and (max-width: 920px) {
+    .mainContent {
+        padding: 24px 80px;
+        width: 920px;
+    }
+    .backgroundBlock {
+        padding: 24px 80px;
+    }
 }

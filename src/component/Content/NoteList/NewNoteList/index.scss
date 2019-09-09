@@ -1,11 +1,8 @@
 .newNoteListBlock {
-    display: flex;
+    box-sizing: border-box;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 156px;
-    height: 204px;
-    border-radius: 9px;
 }
 
 .topicText {

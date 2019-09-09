@@ -3,8 +3,9 @@ import { useSelector } from 'react-redux';
 import styles from './index.scss';
 import themeStyle from '../../../style/theme.scss';
 
-const BackgroundObject = () => {
-  const { theme } = useSelector(state => state);
+const BackgroundObject = (props) => {
+  const { topPosition, } = props;
+  const { theme, } = useSelector(state => state);
   return (
     <div
       className={
@@ -13,6 +14,7 @@ const BackgroundObject = () => {
           ? themeStyle.backgroungObjLight
           : themeStyle.backgroungObjDark}`
       }
+      style={{ top: topPosition, }}
     />
   );
 };

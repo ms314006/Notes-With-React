@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/styles';
 import AddIcon from '@material-ui/icons/Add';
 import styles from './index.scss';
+import noteListStyle from '../index.scss';
 import themeStyle from '../../../../style/theme.scss';
 
 const useStyles = makeStyles({
@@ -19,6 +20,7 @@ const NewNoteList = () => {
     <div
       className={
         `${styles.newNoteListBlock}
+        ${noteListStyle.nodeList}
         ${theme === 'light'
           ? `${themeStyle.fontColorLight} ${themeStyle.borderColorLight}`
           : `${themeStyle.fontColorDark} ${themeStyle.borderColorDark}`

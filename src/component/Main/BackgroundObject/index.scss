@@ -3,4 +3,12 @@
     height: 84px;
     transform-origin: top;
     transform: skewX(150deg);
+    position: absolute;
+}
+
+@media screen and (min-width: 0px) and (max-width: 920px) {
+    .backgroundObject {
+        width: 800px;
+        left: 52px;
+    }
 }
