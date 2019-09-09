@@ -50,3 +50,11 @@ $lightDomColor: #000;
 .blockColorDark {
     background: #424255;
 }
+
+.borderColorLight {
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.borderColorDark {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}

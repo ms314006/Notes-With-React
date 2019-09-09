@@ -10,3 +10,5 @@ export const fontColorLight: string;
 export const fontColorDark: string;
 export const blockColorLight: string;
 export const blockColorDark: string;
+export const borderColorLight: string;
+export const borderColorDark: string;
