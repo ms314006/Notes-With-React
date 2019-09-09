@@ -6,7 +6,7 @@ import ViewModuleIcon from '@material-ui/icons/ViewModule';
 import { changeDisplayNotesMode } from '../../../../action/notes';
 
 const NoteDisplayMode = () => {
-  const { theme, displayNotesMode } = useSelector(state => state);
+  const { theme, displayNotesMode, } = useSelector(state => state);
   const dispatch = useDispatch();
   const getIconColor = (iconType: string) => {
     switch (theme) {
@@ -24,7 +24,7 @@ const NoteDisplayMode = () => {
           case true:
             return '#fff';
           case false:
-            return '#eee';
+            return '#696969';
           default:
             throw new Error('No have displayNotesMode');
         }
