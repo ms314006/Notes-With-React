@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   },
 });
 
-const NewNoteList = () => {
+const CreateNote = () => {
   const classes = useStyles({});
   const { theme } = useSelector(state => state);
   return (
@@ -35,4 +35,4 @@ const NewNoteList = () => {
   );
 };
 
-export default NewNoteList;
+export default CreateNote;
