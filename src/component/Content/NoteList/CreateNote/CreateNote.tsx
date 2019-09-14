@@ -15,12 +15,15 @@ const useStyles = makeStyles({
 
 const CreateNote = () => {
   const classes = useStyles({});
-  const { theme } = useSelector(state => state);
+  const { theme, displayNotesMode, } = useSelector(state => state);
   return (
     <div
       className={
         `${styles.newNoteListBlock}
-        ${noteListStyle.nodeList}
+        ${displayNotesMode === 'module'
+          ? `${noteListStyle.nodeList}`
+          : `${noteListStyle.nodeListSmall}`
+        }
         ${theme === 'light'
           ? `${themeStyle.fontColorLight} ${themeStyle.borderColorLight}`
           : `${themeStyle.fontColorDark} ${themeStyle.borderColorDark}`

@@ -1,12 +1,23 @@
 .nodeListBlock {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nodeList {
     display: flex;
+    flex-direction: column;
     width: 156px;
     height: 204px;
-    margin-bottom: 64px;
+    margin: 0px 12px 64px 12px;
+    border-radius: 9px;
+}
+
+.nodeListSmall {
+    display: flex;
+    flex-direction: row;
+    width: 352px;
+    height: 60px;
+    margin: 0px 12px 64px 12px;
     border-radius: 9px;
 }
