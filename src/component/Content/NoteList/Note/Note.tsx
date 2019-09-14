@@ -1,5 +1,6 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import IconButton from '@material-ui/core/IconButton';
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import themeStyle from '../../../../style/theme.scss';
@@ -8,6 +9,7 @@ import styles from './index.scss';
 
 const Note = (props: any) => {
   const { note, } = props;
+  const dispatch = useDispatch();
   const { theme, displayNotesMode, } = useSelector(state => state);
   return (
     <div
@@ -32,7 +34,12 @@ const Note = (props: any) => {
     >
       <div>{note.name}</div>
       <div>
-        {note.important ? <StarIcon /> : <StarBorderIcon />}
+        <IconButton
+          onClick={() => {
+          }}
+        >
+          {note.important ? <StarIcon /> : <StarBorderIcon />}
+        </IconButton>
       </div>
     </div>
   );
