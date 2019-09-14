@@ -6,15 +6,15 @@ class Note implements INote {
 
   name: string;
 
-  image: string;
+  background: string;
 
   content: string = '';
 
   important: boolean = false;
 
-  constructor(name: string, image: string) {
+  constructor(name: string, background: string) {
     this.name = name;
-    this.image = image;
+    this.background = background;
   }
 
   setImportant(value: boolean) {

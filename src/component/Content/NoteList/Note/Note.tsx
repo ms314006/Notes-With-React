@@ -28,7 +28,7 @@ const Note = (props: any) => {
       }
       style={
         displayNotesMode === 'module'
-          ? { backgroundImage: `url(./static/images/noteBackground/${note.image}.jpg)`, }
+          ? { backgroundImage: `url(./static/images/noteBackground/${note.background}.jpg)`, }
           : {}
       }
     >

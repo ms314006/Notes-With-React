@@ -30,3 +30,22 @@ export const changeDisplayNotesMode = (mode: string) => ({
     displayNotesMode: mode,
   },
 });
+
+export const CREATE_NOTE = 'CREATE_NOTE';
+
+export const createNote = (noteName: string, noteBackground: string) => ({
+  type: CREATE_NOTE,
+  payload: {
+    noteName,
+    noteBackground,
+  },
+});
+
+export const SET_IMPORT_WITH_NOTE = 'SET_IMPORT_WITH_NOTE';
+
+export const setImpotyWithNote = (noteId: string) => ({
+  type: SET_IMPORT_WITH_NOTE,
+  payload: {
+    noteId,
+  },
+});

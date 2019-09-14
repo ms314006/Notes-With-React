@@ -1,10 +1,12 @@
 import * as actions from '../action/notes';
+import Note from '../class/Note';
 
 const initState = {
   theme: 'light',
   searchWord: '',
   filterStar: false,
   displayNotesMode: 'module',
+  notes: [],
 };
 
 const notesReducer = (state = initState, action: any) => {
@@ -28,6 +30,17 @@ const notesReducer = (state = initState, action: any) => {
       return {
         ...state,
         displayNotesMode: action.payload.displayNotesMode,
+      };
+    case actions.CREATE_NOTE:
+      return {
+        ...state,
+        notes: [
+          ...state.notes,
+          new Note(
+            action.payload.noteName,
+            action.payload.noteBackground
+          )
+        ],
       };
     default:
       return state;
