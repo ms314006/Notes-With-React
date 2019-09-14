@@ -5,7 +5,7 @@ import themeStyle from '../../../style/theme.scss';
 
 const BackgroundObject = (props) => {
   const { topPosition, } = props;
-  const { theme, } = useSelector(state => state);
+  const { theme, displayNotesMode } = useSelector(state => state);
   return (
     <div
       className={
@@ -14,7 +14,10 @@ const BackgroundObject = (props) => {
           ? themeStyle.backgroungObjLight
           : themeStyle.backgroungObjDark}`
       }
-      style={{ top: topPosition, }}
+      style={{
+        top: topPosition,
+        display: displayNotesMode === 'module' ? 'block' : 'none',
+      }}
     />
   );
 };
