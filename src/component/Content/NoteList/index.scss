@@ -1,7 +1,7 @@
 .nodeListBlock {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .nodeList {
@@ -16,8 +16,10 @@
 .nodeListSmall {
     display: flex;
     flex-direction: row;
-    width: 352px;
+    align-items: center;
+    width: 48%;
     height: 60px;
-    margin: 0px 12px 64px 12px;
+    margin: 0px 8px 32px 8px;
     border-radius: 9px;
 }
+

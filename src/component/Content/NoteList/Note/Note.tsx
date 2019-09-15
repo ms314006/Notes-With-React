@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import IconButton from '@material-ui/core/IconButton';
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
+import { setImportWithNote } from '../../../../action/notes';
 import themeStyle from '../../../../style/theme.scss';
 import noteListStyle from '../index.scss';
 import styles from './index.scss';
@@ -36,6 +37,7 @@ const Note = (props: any) => {
       <div>
         <IconButton
           onClick={() => {
+            dispatch(setImportWithNote(note.id));
           }}
         >
           {note.important ? <StarIcon /> : <StarBorderIcon />}

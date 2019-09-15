@@ -1,3 +1,5 @@
+import { INote } from '../interface/INote';
+
 export const CHANGE_THEME = 'CHANGE_THEME';
 
 export const chageTheme = (theme: string) => ({
@@ -43,7 +45,7 @@ export const createNote = (noteName: string, noteBackground: string) => ({
 
 export const SET_IMPORT_WITH_NOTE = 'SET_IMPORT_WITH_NOTE';
 
-export const setImpotyWithNote = (noteId: string) => ({
+export const setImportWithNote = (noteId: string) => ({
   type: SET_IMPORT_WITH_NOTE,
   payload: {
     noteId,

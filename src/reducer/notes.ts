@@ -1,7 +1,16 @@
 import * as actions from '../action/notes';
 import Note from '../class/Note';
+import { INote } from '../interface/INote';
 
-const initState = {
+interface IState {
+  theme: string
+  searchWord: string
+  filterStar: boolean
+  displayNotesMode: string
+  notes: INote[]
+}
+
+const initState: IState = {
   theme: 'light',
   searchWord: '',
   filterStar: false,
@@ -42,6 +51,16 @@ const notesReducer = (state = initState, action: any) => {
           )
         ],
       };
+    case actions.SET_IMPORT_WITH_NOTE: {
+      const targetNote = state.notes.find(
+        (note: INote) => note.id === action.payload.noteId
+      );
+      targetNote.setImportant(!targetNote.important);
+      return {
+        ...state,
+        notes: [...state.notes],
+      };
+    }
     default:
       return state;
   }

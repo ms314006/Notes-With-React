@@ -3,16 +3,18 @@ import { useSelector } from 'react-redux';
 import CreateNote from './CreateNote';
 import Note from './Note';
 import styles from './index.scss';
+import { INote } from '../../../interface/INote';
 
 const NoteList = () => {
-  const { filterStar, notes, } = useSelector(state => state);
+  const { filterStar, searchWord, notes, } = useSelector(state => state);
   return (
     <div className={styles.nodeListBlock}>
       <CreateNote />
       {
         notes
-          .filter(note => (filterStar ? note.important : true))
-          .map(note => <Note key={note.id} note={note} />)
+          .filter((note: INote) => (filterStar ? note.important : true))
+          .filter((note: INote) => (note.name.indexOf(searchWord) !== -1))
+          .map((note: INote) => <Note key={note.id} note={note} />)
       }
     </div>
   );
