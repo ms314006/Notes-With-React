@@ -1,37 +1,16 @@
-## Welcome to GitHub Pages
+# Notes-With-React
+Notes with react
 
-You can use the [editor on GitHub](https://github.com/ms314006/Notes-With-React/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## 心得
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1. 已經完全不行了，完成度就像第一週一樣爆炸低。
+2. 一直在處理一些小細節，最後連主要的編輯功能都沒有做好。
+3. 沒有落實開放封閉原則，應該要把「光/暗」主題的 Style 另外實現，而不是在所有需要的地方都下 `if` 判斷，這邊真的寫得很差勁。
+4. 因為覺得 Medium 的編輯方式很有質感，所以想效仿，這幾天一直有想一些也許可行的方式，但是到最後一個也無法實現，實在是有點氣餒。
 
-### Markdown
+## 運行
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ms314006/Notes-With-React/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+1. clone 到專案資料夾。
+2. 運行指令 `npm install` 。
+3. 運行 `npm run start` 。
+4. 啟動瀏覽器 `http://localhost:8000/dist` 。
