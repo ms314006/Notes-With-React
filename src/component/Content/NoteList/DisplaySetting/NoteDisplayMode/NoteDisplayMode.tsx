@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import IconButton from '@material-ui/core/IconButton';
 import ViewListIcon from '@material-ui/icons/ViewList';
 import ViewModuleIcon from '@material-ui/icons/ViewModule';
-import { changeDisplayNotesMode } from '../../../../action/notes';
+import { changeDisplayNotesMode } from '../../../../../action/notes';
 
 const NoteDisplayMode = () => {
   const { theme, displayNotesMode, } = useSelector(state => state);

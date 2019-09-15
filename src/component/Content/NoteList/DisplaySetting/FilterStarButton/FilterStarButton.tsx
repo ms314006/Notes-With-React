@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
-import * as actions from '../../../../action/notes';
+import * as actions from '../../../../../action/notes';
 
 const useStyles = makeStyles({
   icon: {
